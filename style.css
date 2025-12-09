@@ -1,0 +1,99 @@
+/* ============== *
+ * Global styles  *
+ * ============== */
+* {
+    font-family: monospace;
+}
+
+/* ================= *
+ * General Styles    *
+ * ================= */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header, main, footer */
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+    text-align: center;
+    background-color: #F9F8F6;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* ================= *
+ * Navigation Styles *
+ * ================= */
+nav ul li a {
+    margin: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* =============== *
+ * Project styles  *  
+ * =============== */
+ #projects ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ================== *
+ * Justify paragraphs *
+ * ================== */
+.justify p {
+    text-align: justify;
+    text-align-last: center;
+    margin: 0px 200px;
+}
+
+/* ============== *
+ * Footer styles  *
+ * ============== */
+footer {
+    text-align: left;
+}
+
+/* ================== *
+ * Responsive Design  *
+ * ================== */
+
+@media (max-width: 768px) {
+    .justify p {
+        margin: 0px 100px;
+    }
+}
+
+@media (max-width: 460px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .justify p {
+        margin: 0px 40px;
+    }
+}
